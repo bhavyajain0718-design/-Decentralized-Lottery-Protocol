@@ -1,66 +1,110 @@
-## Foundry
+# 🎲 Decentralized Lottery Protocol
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+> A trustless, automated lottery smart contract powered by verifiable randomness.  
+> Built with Solidity + Foundry + Chainlink infrastructure.
 
-Foundry consists of:
+---
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## 👋 About Me
 
-## Documentation
+Hi, I'm **Bhavya**  
+Blockchain & DeFi developer focused on **smart contract engineering and protocol security**.
 
-https://book.getfoundry.sh/
+I build real-world protocols to understand how money systems behave under risk — not just tutorials.
 
-## Usage
+---
 
-### Build
+## 🚀 Overview
 
-```shell
-$ forge build
-```
+This project implements a fully decentralized lottery where:
 
-### Test
+- Players enter by paying ETH
+- A winner is selected automatically
+- Randomness is cryptographically verifiable
+- No admin can manipulate results
 
-```shell
-$ forge test
-```
+The protocol removes:
+❌ manual selection  
+❌ owner bias  
+❌ predictable randomness  
 
-### Format
+And replaces it with:
+✅ Verifiable randomness  
+✅ Trustless automation  
+✅ Deterministic smart contract logic  
 
-```shell
-$ forge fmt
-```
+---
 
-### Gas Snapshots
+## ⚙️ Architecture
 
-```shell
-$ forge snapshot
-```
+### Randomness
+Uses **Chainlink VRF** for provably fair winner selection.
 
-### Anvil
+### Automation
+Uses **Chainlink Automation (Keepers)** to trigger draws automatically.
 
-```shell
-$ anvil
-```
+### Testing
+Built with **Foundry** for:
+- Unit tests
+- Fuzz tests
+- Invariant tests
+- Gas reports
 
-### Deploy
+---
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+## ✨ Features
 
-### Cast
+### Core
+- Enter lottery with ETH
+- Automatic round closing
+- Random winner selection
+- Prize pool distribution
 
-```shell
-$ cast <subcommand>
-```
+### Security
+- Reentrancy-safe withdrawals
+- State machine checks
+- No admin control over randomness
+- Safe ETH transfers
 
-### Help
+### Testing
+- Full unit tests
+- Fuzzed entry logic
+- Edge case coverage
+- Gas optimization
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+---
+
+## 🧠 What I Learned
+
+- Chainlink VRF integration
+- Oracle-based architecture
+- Automation/keeper systems
+- Secure fund handling
+- State machine design
+- Writing invariant tests
+- Thinking like a protocol engineer
+
+---
+
+## 🧱 Tech Stack
+
+- Solidity
+- Foundry
+- Chainlink VRF
+- Chainlink Automation
+
+---
+
+## 📂 Project Structure
+
+src/        → Lottery contracts  
+script/     → deployment scripts  
+test/       → unit + fuzz tests  
+
+---
+
+## ⚙️ Setup
+
+### Install
+```bash
+forge install
